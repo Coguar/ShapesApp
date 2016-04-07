@@ -9,8 +9,9 @@
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
-//	ui::CButton button;
+	ui::CButtonPtr button = std::make_shared<ui::CButton>("test");
 	ui::CToolBar toolBar(window);
+	toolBar.InsertChild(button);
 
 	while (window.isOpen())
 	{

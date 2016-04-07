@@ -6,12 +6,10 @@ using namespace sf;
 namespace ui
 {
 
-	CButton::CButton(std::string const& name, sf::Vector2f const& pos)
+	CButton::CButton(std::string const& name)
 		: m_background({ 100, 30 }),
-		m_buttonPos(pos),
 		m_buttonName(name)
 {
-	m_background.setPosition(m_buttonPos);
 }
 
 void CButton::OnDraw(sf::RenderTarget & target, sf::RenderStates states) const
